@@ -1,4 +1,4 @@
-# Zaiqa House — Restaurant Website
+# Zaiqa House  Restaurant Website
 
 <img width="1893" height="821" alt="image" src="https://github.com/user-attachments/assets/1b49f540-938b-4add-a2ce-4f850be19492" />
 <img width="1848" height="700" alt="image" src="https://github.com/user-attachments/assets/d2bb835b-4752-4dad-8dec-0e44a2769d8e" />
