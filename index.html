@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaiqa House — Modern Pakistani Dining in Hyderabad</title>
+<meta name="description" content="Zaiqa House serves modern Pakistani cuisine in Hyderabad: charcoal BBQ, slow-cooked karahi, and house desserts. View the menu and reserve your table online.">
+<meta property="og:title" content="Zaiqa House — Modern Pakistani Dining">
+<meta property="og:description" content="Charcoal BBQ, slow-cooked karahi, house desserts. Reserve online.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['Inter','sans-serif'], display: ['"Playfair Display"','serif'] },
+  colors: { amberx: { 50:'#fffbeb',400:'#fbbf24',500:'#f59e0b',600:'#d97706' }, coal: { 800:'#1c1917', 900:'#0c0a09' } }
+}}}
+</script>
+</head>
+<body class="font-sans bg-coal-900 text-stone-300 antialiased">
+
+<!-- Nav -->
+<header class="fixed top-0 inset-x-0 z-50 bg-coal-900/85 backdrop-blur border-b border-white/5">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
+    <a href="#" class="font-display text-2xl font-bold text-white">Zaiqa <span class="text-amberx-400">House</span></a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-400">
+      <a href="#menu" class="hover:text-amberx-400 transition">Menu</a>
+      <a href="#gallery" class="hover:text-amberx-400 transition">Gallery</a>
+      <a href="#about" class="hover:text-amberx-400 transition">Our story</a>
+      <a href="#contact" class="hover:text-amberx-400 transition">Contact</a>
+    </div>
+    <a href="#reserve" class="rounded-lg bg-amberx-500 px-4 py-2 text-sm font-bold text-coal-900 hover:bg-amberx-400 transition">Reserve a table</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="relative pt-40 pb-28 px-5 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-amberx-500/10 via-transparent to-transparent pointer-events-none"></div>
+  <div class="max-w-4xl mx-auto text-center relative">
+    <p class="text-amberx-400 font-semibold tracking-[0.3em] uppercase text-xs">Est. 2019 · Hyderabad</p>
+    <h1 class="mt-5 font-display text-5xl md:text-7xl font-bold text-white leading-tight">
+      Fire, spice &amp;<br>everything <span class="text-amberx-400">nice</span>
+    </h1>
+    <p class="mt-6 text-lg text-stone-400 max-w-xl mx-auto">
+      Modern Pakistani dining: charcoal BBQ, slow-cooked karahi, and desserts worth skipping dinner for.
+    </p>
+    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#reserve" class="w-full sm:w-auto rounded-lg bg-amberx-500 px-8 py-3.5 font-bold text-coal-900 hover:bg-amberx-400 transition">Reserve a table</a>
+      <a href="#menu" class="w-full sm:w-auto rounded-lg border border-white/20 px-8 py-3.5 font-semibold text-white hover:border-amberx-400 hover:text-amberx-400 transition">View the menu</a>
+    </div>
+    <div class="mt-10 flex items-center justify-center gap-8 text-sm text-stone-500">
+      <span><strong class="text-white">4.8★</strong> on Google</span>
+      <span>·</span>
+      <span>Open daily <strong class="text-white">12:00 – 23:30</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="py-20 px-5 border-t border-white/5">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center">
+      <p class="text-amberx-400 font-semibold tracking-[0.3em] uppercase text-xs">The menu</p>
+      <h2 class="mt-3 font-display text-4xl md:text-5xl font-bold text-white">House favourites</h2>
+    </div>
+
+    <!-- Tabs -->
+    <div class="mt-10 flex flex-wrap justify-center gap-3" role="tablist">
+      <button onclick="showTab('bbq')" id="tab-bbq" class="menu-tab rounded-full border border-amberx-500 bg-amberx-500 px-5 py-2 text-sm font-bold text-coal-900 transition">Charcoal BBQ</button>
+      <button onclick="showTab('mains')" id="tab-mains" class="menu-tab rounded-full border border-white/20 px-5 py-2 text-sm font-semibold text-stone-300 hover:border-amberx-400 transition">Karahi &amp; Mains</button>
+      <button onclick="showTab('dessert')" id="tab-dessert" class="menu-tab rounded-full border border-white/20 px-5 py-2 text-sm font-semibold text-stone-300 hover:border-amberx-400 transition">Desserts &amp; Drinks</button>
+    </div>
+
+    <div id="panel-bbq" class="menu-panel mt-10 grid gap-5 md:grid-cols-2">
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Seekh Kebab Platter</p><p class="mt-1 text-sm text-stone-400">Hand-minced beef, charred over charcoal, mint chutney</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 1,150</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Malai Boti</p><p class="mt-1 text-sm text-stone-400">Cream-marinated chicken, butter-basted skewers</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 1,250</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Lamb Chops</p><p class="mt-1 text-sm text-stone-400">Overnight spice rub, finished on open flame</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 2,400</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Chicken Tikka, House Style</p><p class="mt-1 text-sm text-stone-400">Smoked, then flash-grilled; served with warm naan</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 950</p></div>
+    </div>
+
+    <div id="panel-mains" class="menu-panel hidden mt-10 grid gap-5 md:grid-cols-2">
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Zaiqa Chicken Karahi</p><p class="mt-1 text-sm text-stone-400">Slow-cooked in desi ghee, finished tableside <span class="text-amberx-400">· signature</span></p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 1,850</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Mutton Karahi</p><p class="mt-1 text-sm text-stone-400">Tomato-forward, green chilli, hand-torn coriander</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 2,600</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Sindhi Biryani</p><p class="mt-1 text-sm text-stone-400">Aged basmati, potatoes, aloo bukhara, raita</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 850</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Daal Makhani &amp; Naan</p><p class="mt-1 text-sm text-stone-400">24-hour simmered black lentils, tandoor naan</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 700</p></div>
+    </div>
+
+    <div id="panel-dessert" class="menu-panel hidden mt-10 grid gap-5 md:grid-cols-2">
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Gulab Jamun Cheesecake</p><p class="mt-1 text-sm text-stone-400">The internet's favourite. Ours started it locally.</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 650</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Kulfi Falooda</p><p class="mt-1 text-sm text-stone-400">Pistachio kulfi, vermicelli, rose, basil seeds</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 550</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Doodh Patti Crème Brûlée</p><p class="mt-1 text-sm text-stone-400">Chai-infused custard, torched sugar crust</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 600</p></div>
+      <div class="flex justify-between gap-4 rounded-2xl border border-white/10 bg-coal-800 p-5"><div><p class="font-bold text-white">Fresh Lime Sodas &amp; Lassi</p><p class="mt-1 text-sm text-stone-400">Sweet, salty, or mango, ask your server</p></div><p class="font-bold text-amberx-400 whitespace-nowrap">Rs 300</p></div>
+    </div>
+
+    <p class="mt-8 text-center text-sm text-stone-500">Full menu available in-house · Prices include tax</p>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="py-20 px-5 border-t border-white/5">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center">
+      <p class="text-amberx-400 font-semibold tracking-[0.3em] uppercase text-xs">Gallery</p>
+      <h2 class="mt-3 font-display text-4xl md:text-5xl font-bold text-white">A look inside</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-amberx-500/30 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🔥</div>
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-orange-700/30 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🍢</div>
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-red-800/30 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🍛</div>
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-amberx-400/20 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🫖</div>
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-stone-600/30 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🥘</div>
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-amberx-600/25 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🍰</div>
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-orange-900/40 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🕯️</div>
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-yellow-700/25 to-coal-800 border border-white/10 flex items-center justify-center text-5xl">🥭</div>
+    </div>
+    <p class="mt-6 text-center text-xs text-stone-600">Placeholder tiles — swap with food photography before client delivery</p>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 px-5 border-t border-white/5">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-amberx-400 font-semibold tracking-[0.3em] uppercase text-xs">Our story</p>
+      <h2 class="mt-3 font-display text-4xl font-bold text-white">Three generations of recipes, one open kitchen</h2>
+    </div>
+    <div class="space-y-4 text-stone-400 leading-relaxed">
+      <p>Zaiqa House began as a family Sunday tradition: charcoal lit at noon, karahi served at dusk. In 2019 we opened our doors so the rest of Hyderabad could pull up a chair.</p>
+      <p>Everything is made in-house daily: the masalas are ground each morning, the naan dough proofs overnight, and the BBQ never touches a gas flame. You can watch it all happen — the kitchen has no walls.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Reservation -->
+<section id="reserve" class="py-20 px-5 border-t border-white/5">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center">
+      <p class="text-amberx-400 font-semibold tracking-[0.3em] uppercase text-xs">Reservations</p>
+      <h2 class="mt-3 font-display text-4xl md:text-5xl font-bold text-white">Book your table</h2>
+      <p class="mt-4 text-stone-400">Groups of 8+ or private events? Call us directly.</p>
+    </div>
+    <form class="mt-10 grid gap-5 sm:grid-cols-2 rounded-3xl border border-white/10 bg-coal-800 p-8" onsubmit="event.preventDefault(); document.getElementById('res-ok').classList.remove('hidden'); this.reset();">
+      <div>
+        <label for="r-name" class="block text-sm font-semibold text-stone-300">Name *</label>
+        <input id="r-name" type="text" required placeholder="Your name" class="mt-1.5 w-full rounded-lg bg-coal-900 border border-white/15 px-4 py-2.5 text-white placeholder-stone-600 focus:outline-none focus:ring-2 focus:ring-amberx-500">
+      </div>
+      <div>
+        <label for="r-phone" class="block text-sm font-semibold text-stone-300">Phone *</label>
+        <input id="r-phone" type="tel" required placeholder="+92 3XX XXXXXXX" class="mt-1.5 w-full rounded-lg bg-coal-900 border border-white/15 px-4 py-2.5 text-white placeholder-stone-600 focus:outline-none focus:ring-2 focus:ring-amberx-500">
+      </div>
+      <div>
+        <label for="r-date" class="block text-sm font-semibold text-stone-300">Date *</label>
+        <input id="r-date" type="date" required class="mt-1.5 w-full rounded-lg bg-coal-900 border border-white/15 px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-amberx-500">
+      </div>
+      <div>
+        <label for="r-time" class="block text-sm font-semibold text-stone-300">Time *</label>
+        <select id="r-time" required class="mt-1.5 w-full rounded-lg bg-coal-900 border border-white/15 px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-amberx-500">
+          <option>12:00</option><option>13:00</option><option>14:00</option><option>19:00</option><option>20:00</option><option>21:00</option><option>22:00</option>
+        </select>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="r-guests" class="block text-sm font-semibold text-stone-300">Guests *</label>
+        <select id="r-guests" required class="mt-1.5 w-full rounded-lg bg-coal-900 border border-white/15 px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-amberx-500">
+          <option>2 guests</option><option>3–4 guests</option><option>5–7 guests</option><option>8+ (we'll call you)</option>
+        </select>
+      </div>
+      <div class="sm:col-span-2">
+        <button type="submit" class="w-full rounded-lg bg-amberx-500 px-8 py-3.5 font-bold text-coal-900 hover:bg-amberx-400 transition">Reserve now</button>
+        <p id="res-ok" class="hidden mt-4 rounded-lg bg-amberx-500/10 border border-amberx-500/30 px-4 py-3 text-sm font-medium text-amberx-400">✓ Reservation request received! We'll confirm by SMS within 30 minutes.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Contact / Footer -->
+<footer id="contact" class="border-t border-white/5 py-14 px-5">
+  <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-3 text-sm">
+    <div>
+      <p class="font-display text-2xl font-bold text-white">Zaiqa <span class="text-amberx-400">House</span></p>
+      <p class="mt-3 text-stone-400">14-C Qasimabad Main Boulevard<br>Hyderabad, Sindh, Pakistan</p>
+    </div>
+    <div>
+      <p class="font-bold text-white">Hours</p>
+      <p class="mt-3 text-stone-400">Open daily<br>12:00 – 23:30</p>
+    </div>
+    <div>
+      <p class="font-bold text-white">Contact</p>
+      <div class="mt-3 space-y-1.5 text-stone-400">
+        <a href="tel:+922211223344" class="block hover:text-amberx-400 transition">☎ +92 22 1122 3344</a>
+        <a href="mailto:table@zaiqahouse.example" class="block hover:text-amberx-400 transition">✉ table@zaiqahouse.example</a>
+      </div>
+    </div>
+  </div>
+  <p class="max-w-6xl mx-auto mt-10 pt-6 border-t border-white/5 text-xs text-stone-600">© 2026 Zaiqa House · Fictional portfolio project by <a href="https://github.com/FaaizaKarim" class="text-amberx-400 hover:underline">Faaiza Saand</a></p>
+</footer>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.menu-panel').forEach(p => p.classList.add('hidden'));
+  document.getElementById('panel-' + name).classList.remove('hidden');
+  document.querySelectorAll('.menu-tab').forEach(t => {
+    t.classList.remove('bg-amberx-500','text-coal-900','border-amberx-500','font-bold');
+    t.classList.add('border-white/20','text-stone-300','font-semibold');
+  });
+  const active = document.getElementById('tab-' + name);
+  active.classList.add('bg-amberx-500','text-coal-900','border-amberx-500','font-bold');
+  active.classList.remove('border-white/20','text-stone-300','font-semibold');
+}
+</script>
+
+</body>
+</html>
