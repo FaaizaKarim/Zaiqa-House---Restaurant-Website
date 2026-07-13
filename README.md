@@ -16,6 +16,6 @@ responsive throughout.
 
 **Stack:** HTML5, Tailwind CSS (CDN), vanilla JavaScript.
 
-**Live:** <add Vercel URL>
+**Live:** <https://zaiqa-house-restaurant-website.vercel.app/>
 
 Portfolio project by [Faaiza Saand](https://github.com/FaaizaKarim).
